@@ -25,7 +25,7 @@ def set_race():
     george.color("green"); george.penup(); george.goto(-160, 100)
 
     julia = Turtle(shape="turtle")
-    julia.color("red"); george.penup(); george.goto(-160, 70)
+    julia.color("red"); julia.penup(); julia.goto(-160, 70)
 
     """Start the race"""
     for turn in range(100):
