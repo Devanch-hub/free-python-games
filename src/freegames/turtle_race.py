@@ -20,10 +20,11 @@ def set_race():
         left(90)
         forward(20)
 
-    """Assign players with colors"""
+    """Set the colors of the players"""
     colors = ["green", "red", "blue", "orange"]
     all_turtles = []
 
+    """Assign the colors"""
     for i in range(len(colors)):
         new_turtle = Turtle(shape="turtle")
         new_turtle.color(colors[i])
