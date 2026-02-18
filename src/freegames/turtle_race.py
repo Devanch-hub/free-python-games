@@ -20,17 +20,20 @@ def set_race():
         left(90)
         forward(20)
 
-    """Create the racers"""
-    george = Turtle(shape="turtle")
-    george.color("green"); george.penup(); george.goto(-160, 100)
+    """Assign players with colors"""
+    colors = ["green", "red", "blue", "orange"]
+    all_turtles = []
 
-    julia = Turtle(shape="turtle")
-    julia.color("red"); julia.penup(); julia.goto(-160, 70)
+    for i in range(len(colors)):
+        new_turtle = Turtle(shape="turtle")
+        new_turtle.color(colors[i])
+        new_turtle.penup()
+        new_turtle.goto(-160, 100 - (i * 30))
+        all_turtles.append(new_turtle)
 
-    """Start the race"""
-    for turn in range(100):
-        george.forward(randint(1, 5))
-        julia.forward(randint(1, 5))
+    """Race players one by one"""
+    for t in all_turtles:
+        t.forward(randint(1, 5))
 
 set_race()
 done()
